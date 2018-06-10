@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>下拉菜单练习</title>
+	<style>
+       body{
+       	background: url(images/chun1.jpg) no-repeat top center;
+       }
+	</style>
+	<script>
+		window.onload=function(){
+			var sele=document.getElementById("sele");//下拉菜单就像数组一样。但是一会只能确定一个元素，所以不需要像定义伪数组一样去定义它
+			sele.onchange=function(){               //它的值就是选中的option的value值
+                 
+                 switch(sele.value)
+                 {
+                 	case "1":document.body.style.background="url(images/chun1.jpg) no-repeat top center";break;
+                 	case "2":document.body.style.background="url(images/xia1.jpg)  no-repeat top center";break;
+                 	case "3":document.body.style.background="url(images/qiu1.jpg)  no-repeat top center";break;
+                 	case "4":document.body.style.background="url(images/dong1.jpg) no-repeat top center";break;
+
+                 }
+			}
+		}
+	</script>
+</head>
+<body>
+	<select name="" id="sele">
+		<option value="1">春</option>
+		<option value="2">夏</option>
+		<option value="3">秋</option>
+		<option value="4">冬</option>
+	</select>  
+</body>
+</html>

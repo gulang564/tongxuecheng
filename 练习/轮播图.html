@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>轮播图</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+        .box{
+        	width: 557px;
+        	height: 192px;
+        	border: 5px solid black;
+        	margin: 100px auto;
+        	position: relative;
+        	overflow: hidden;
+        }
+        .box .circle{
+        	width: 120px;
+        	height: 30px;
+        	position: absolute;
+        	bottom:10px;
+        	left: 50%;
+        	margin-left: -60px;  	
+        }
+        .box ul{
+        	list-style: none;
+        }
+        .circle span{
+      		float: left;
+            width: 25px;
+            height: 25px;
+           margin-right: 4px;
+           background-color: blue;
+           border-radius: 50%;
+           text-align: center;
+           cursor: pointer;
+           
+        }
+	</style>
+        <script>
+        	window.onload=function(){
+        		var spans=document.getElementsByTagName("span");
+        		var imas=document.getElementsByTagName("img");
+        		for(var i=0;i<spans.length;i++)
+        		{ 
+        			spans[i].index=i;
+        			spans[i].onmouseover=function(){
+        			for(var j=0;j<spans.length;j++)
+        			{
+        				imas[j].style.display="none";
+        			}
+        			imas[this.index].style.display="block";
+        		}
+        	}
+        }
+               
+
+        </script>
+</head>
+<body>
+	<div class="box">
+		<div class="pic">
+			<ul>
+				<li><img src="images/zq1.png"></li>
+				<li><img src="images/zq2.png"></li>
+				<li><img src="images/zq3.png"></li>
+				<li><img src="images/zq4.png"></li>
+			</ul>
+		</div>
+		<div class="circle" >
+		<span>1</span>
+		<span>2</span>
+		<span>3</span>
+		<span>4</span>
+		</div>
+	</div>
+</body>
+</html>

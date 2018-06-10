@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+       .box{
+       	width: 557px;
+        	height: 190px;
+        	border: 1px solid black;
+        	overflow: hidden;
+        	margin: 100px auto;
+        	position: relative;
+       }
+       ul{
+       	list-style: none;
+       }
+       .circle{
+       	border: 1px solid yellow;
+       	height: 15px;
+       	background-color: pink;
+       	position: absolute;
+       	bottom: 10px;
+       	left: 50%;
+       /*	margin-left: */
+       }
+	</style>
+	<script>
+		window.onload=function(){
+			var box=document.getElementById("box");
+			var cricle=document.createElement("div");
+			cricle.setAttribute("class","cricle");
+			box.appendChild(circle);
+
+			var ul=getElementById("ul");
+			var lis=ul.children;
+			alert(lis.length);
+
+		}
+	</script>
+</head>
+<body>
+	<div class="box">
+		<ul>
+			<li><img src="images/zq1.png"></li>
+			<li><img src="images/zq2.png"></li>
+			<li><img src="images/zq3.png"></li>
+			<li><img src="images/zq4.png"></li>
+		</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>清除浮动</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.box{
+		width: 900px;
+		height: 600px;
+		margin: 0 auto;
+		border:1px solid black;
+
+	}
+       .box1{
+       	float: left;
+       	height: 300px;
+       	width: 400px;
+       	border:1px solid red;
+        margin-right: 40px;
+       }
+       .box2{
+       	float: left;
+       	height: 300px;
+       	width: 400px;
+       	border:1px solid red;
+       }
+       .box3{
+       	width: 200px;
+       	height: 400px;
+       	border: 1px solid purple;
+       	margin-top: 60px;
+       }
+       .cl{
+       	clear: both;
+       }
+	</style>
+</head>
+<body>
+<div class="box">
+	<div class="box1">这个对于刚开始学DIV+CSS的人来说确实很纠结，我刚开是的时候也是这样，不过我的理解就是“浮动”和“清楚浮动”float的翻译就是浮动，至于是左浮动还是右浮动都一样了，浏览器的文档流可以理解成都是钉在浏览器里面的，而是用了浮动的东西呢就飘起来了，它会飘在浏览器的上面（当然不会飘出BODY去）。它飘起来了那它下面肯定就空了啊，空了浏览器就会吧钉在它上面的层填到它下面去，而浏览器是从左向右排列的，所以就出现了你看到的那些问题。
+而用CLEAR清楚浮动后就告诉浏览器下面的元素不受浮动的影</div>
+	<div class="box2">
+		好久没更新了。并不是在折腾什么大作，而是广度学习与实践中，加上婚礼等诸多大事，所以产出较少。
+今天这篇也只是小作，博客是自己很好的学习工具，只要我学习不止，博客也会不断更新的。
+我们平时一般都使用clear:both清除浮动，貌似就干这一件事件。用得很开心，但似乎理解上懵懵懂懂，我其实也是，早年的时候，测试过CSS clear:left/right，虽知其作用（80%确定而已），但不知其机理。
+有必要再次整理下，温故知新。可能很多同行都没有注意left/right值，或者可能理解上含糊，或者不知道其实际意义在何处。So, follow me!
+	</div>
+	<div class="box3 cl">
+		而官方的说法则是“设置了clear的元素不能怎样怎样”。也就是我自己如何如何~~大家可以再次感受下……
+
+为何官方解释更好呢？难道是“己所不欲勿施于人”的缘故？哈，这个解释赞的，方便记忆。更通俗的原因是：
+
+务必记住这句话：“float是魔鬼，会影响其他相邻元素；但是clear是小白，其只会影响自身，不会对其他相邻元素造成影响！”
+
+但是，官方的解释似乎拗口，缺少点灵性。于是，我根据自己的感性认知，做了如下理解：
+
+clear语法：
+	</div>
+</div>
+</body>
+</html>

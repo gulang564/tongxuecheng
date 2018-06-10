@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+      .box{
+      	width: 320px;
+      	height: 220px;
+      	margin: 100px auto;
+      	overflow: hidden;
+      }
+      .mt span{
+      	width: 75px;
+      	height: 20px;
+         display: inline-block;
+         cursor: pointer;
+         text-align: center;
+         background-color: pink;
+         line-height: 20px;
+         cursor: pointer;
+      }
+      ul{
+      	list-style: none;
+      }
+      .mb li{
+      	width: 320px;
+      	height: 200px;
+      	background-color: red;
+      	
+      	display: none;
+      	/*display: none;*/
+      	
+      }
+      .mt span.first{
+      	background-color: red;
+      }
+      .current{
+      	background-color: yellow;
+      }
+      .mb li.l{
+      	display: block;
+      }
+	</style>
+	<script>
+		window.onload=function(){
+			var spans=document.getElementsByTagName("span");
+			var lis=document.getElementsByTagName("li");
+
+			for(var i=0;i<spans.length;i++)
+			{
+                 spans[i].index=i;
+               spans[i].onmouseover=function(){
+               	for(var j=0;j<spans.length;j++)
+               	{
+               		spans[j].style="background-color:none";
+               	}
+               	this.style="background-color:yellow";
+               	for(var m=0;m<spans.length;m++)
+               	{
+               		lis[m].className="";
+               	}
+
+                  lis[this.index].className="l";
+               	
+               }
+			}
+		}
+	</script>0
+</head>
+<body>
+	<div class="box">
+		<div class="mt">
+			<span class="first">体育</span>
+			<span>星闻</span>
+			<span>电脑</span>
+			<span>科技</span>
+		</div>
+		<div class="mb">
+			<ul>
+				<li class="l">体育栏</li>
+				<li>星闻栏</li>
+				<li>电脑栏</li>
+				<li>科技栏</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

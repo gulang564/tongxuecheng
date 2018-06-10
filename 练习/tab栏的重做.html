@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>重做tab 栏</title>
+	<style>
+     .box{
+     	width: 270px;
+     	margin: 100px auto;
+     }
+     .bottom div{
+     	width: 270px;
+     	height: 80px;
+     	background-color: red;
+     	margin-bottom: 10px;
+     	display: none;
+     }
+		.current{
+      	background-color: purple;
+      }
+	</style>
+	<script>
+		
+		window.onload=function(){
+			var btns=document.getElementsByTagName("button");
+			var divs=document.getElementById("hezi").getElementsByTagName("div");
+			for(var i=0;i<btns.length;i++)
+			{
+				btns[i].index=i;
+               btns[i].onclick=function(){
+				for(var j=0;j<btns.length;j++)
+				{
+					btns[j].style="background-color:none";              //形式一致就可以。用className是只要上下一样就行
+				}
+				this.style="background-color:blue";                     //用className时 只能用类名。不能自己给颜色
+			  }
+		    }
+		}
+	</script>
+</head>
+<body>
+	<div class="box">
+		<div class="top">
+			<button>按钮1</button>
+			<button>按钮2</button>
+			<button>按钮3</button>
+			<button>按钮4</button>
+			<button>按钮5</button>
+		</div>
+		<div class="bottom" id="hezi">
+			<div>盒子1</div>
+			<div>盒子2</div>
+			<div>盒子3</div>
+			<div>盒子4</div>
+			<div>盒子5</div>
+		</div>
+	</div>
+</body>
+</html>

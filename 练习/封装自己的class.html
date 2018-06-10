@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>封装自己的class</title>
+	<style>
+	*{
+	  margin: 0;
+	  padding: 0;
+	}
+         div{
+         	width: 100px;
+         	height: 100px;
+         	margin-bottom: 10px;
+         	background-color: pink;
+         }
+	</style>
+	<script>
+		window.onload=function(){
+			function getClass(classname){
+				if (document.getElementsByClassName)
+				{
+					return document.getElementsByClassName(classname);
+				}
+				var a=[];
+				var dom=document.getElementsByTagName("*");
+				for(var i=0;i<dom.length;i++)
+				{
+					if(dom[i].className=="demo")
+					a.push(dom[i]);
+				}
+				return a;
+			}
+			alert(getClass("demo").length);
+		}
+	</script>
+</head>
+<body>
+	<div></div>
+	<div class="demo"></div>
+	<div></div>
+	<div></div>
+	<div class="demo"></div>
+	<div></div>
+	<div class="demo"></div>
+	<div class="demo"></div>
+	<div></div>
+	<div></div>
+</body>
+</html>

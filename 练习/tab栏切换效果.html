@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tab栏切换效果</title>
+	<style type="text/css">
+	.box{
+		margin: 100px auto;
+		width: 260px;    /*用margin 0 auto; 盒子需要有宽度，不然不能居中；*/
+	}
+      .top{
+      	height: 40px;
+      	width: 280px;
+      }
+      .botton div{
+      	height: 200px;
+      	width: 280px;
+      	background-color: pink;
+      	margin-bottom: 10px;
+      }
+      .top button{
+      	width: 50px;
+      }
+      .current{
+      	background-color: purple;
+      }
+      .botton div{
+      	display: none;
+      }
+      .current{
+      	background-color: purple;
+      }
+	</style>
+	<script>
+		window.onload=function(){
+			var btns=document.getElementsByTagName("button");
+			var divs=document.getElementById("hezi").getElementsByTagName("div");
+			for( var i=0;i<btns.length;i++)
+			{
+				btns[i].index=i;
+				btns[i].onclick=function(){
+					for(var j=0;j<btns.length;j++)
+					{
+						btns[j].className="";
+					}
+					this.className="current";
+					for(var m=0;m<btns.length;m++)
+						{
+							divs[m].style.display="none";
+						}
+                    divs[this.index].style.display="block";
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="box">
+		<div class="top">
+			<button>盒子1</button>
+			<button>盒子2</button>
+			<button>盒子3</button>
+			<button>盒子4</button>
+			<button>盒子5</button>
+		</div>
+        <div class="botton" id="hezi">
+        	<div style="display:block";>第1个盒子</div>
+        	<div>第2个盒子</div>
+        	<div>第3个盒子</div>
+        	<div>第4个盒子</div>
+        	<div>第5个盒子</div>
+        </div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,288 @@
+*{
+		margin: 0;
+		padding: 0;
+	}
+	body{
+		
+		width: 1200px;
+		margin: 0 auto;
+	}
+      .header{
+        font-family: "微软雅黑";
+      	height: 215px;
+      	background-image: url(images/demo_01.png);
+      }
+        div.nav{
+        	height: 52px;
+        }
+        .nav ul{
+        	list-style: none;
+        }
+        .nav ul li{
+        	float: left;
+        	
+        	height: 52px;
+        	
+            text-align: center;
+            line-height: 52px;
+        }
+        .nav ul li a{
+        	text-decoration: none;
+        	display: block;
+        	width: 171.3px;
+        	height: 52px;
+            background-color: #086a85;
+            color: #ffffff;
+        }.nav ul  li.first a{
+        	width: 172px;
+        	background-color: #d1d4d4;
+        }
+        .nav ul li a:hover{
+        	background-color: skyblue;
+        }
+        .cl{
+        	clear: both;
+        }
+        .content{
+        	font-family: "微软雅黑";
+        	height: 390px;
+        }
+       .content .contentleft{
+       	float: left;
+        width: 420px;    /*不确定*/
+       	height: 384px;
+       }
+       .content .contentleft .top{
+       	
+       	height: 30px;
+       	padding-left: 18px;
+       	padding-top: 36px;
+       }
+       .content .contentleft ul{
+       	padding-left: 25px;
+       }
+    
+        .content .contentleft li{
+ 
+        	height: 44.5px;
+        	
+        }
+       .content .cont{
+       	float: left;
+       }
+       
+       
+       .content .contright{
+       	float: right;
+       	width: 50px;
+       	margin-right: 30px;
+       	color: #0384a8;
+
+       }
+      
+        .content .contentleft .li1{
+        	margin-top: 10px;
+        	text-decoration: underline;
+        	font-weight: bold;
+        }
+        .content .contentleft span{
+        	font-weight: bold;
+        }
+        
+        .content .contentleft .p2{
+        	display: block;
+        	float: right;
+        	width: 96px;
+        	height: 34px;
+        	color: #0384a8;
+
+        }
+        .content .contentleft .p1{
+             float: right;
+           margin-right: 200px;
+       }
+
+            .content .contentleft div.qiang{
+            	height: 5px;
+            	margin-right:30px;
+            	background-color: #0384a8;
+            }
+
+       .content .contentright{
+       	float: right;
+       	width: 780px;
+        height: 318px;
+       }
+       .content .contentright .righttop{
+       	height: 30px;
+       	padding-left: 18px;
+       	padding-top: 39px;
+       }
+       .content .contentright .righttop .p1{
+              float: right;
+           margin-right: 386px;
+       }
+       .content .contentright .righttop .p2{
+       	display: block;
+        	float: right;
+        	width: 96px;
+        	height: 34px;
+        	color: #0384a8;
+       }
+       .content .contentright .shixian{
+       	height: 5px;
+       	background-color: #0384a8;
+       }
+       .content .contentright .bott{
+       	width: 780px;
+       	height: 356px;
+       }
+      .content .contentright .bott .lf{
+      	float: left;
+      }
+      .content .rig{
+      	float: right;
+      }
+      .rig{
+        width: 52%;
+      }
+      .content .rig .p1{
+      	margin-right: 60px;
+      	display: block;
+      	float: right;
+      	padding-top: 10px;
+      	font-weight: bold;
+      }
+       .content .rig .p2{
+       	display: block;
+       	float: right;
+       	text-indent: 2em;
+       }
+       .content .rig .p3{
+       	display: block;
+       	float: right;
+       }
+       .wxlb li{
+        height: 40px;
+       }
+      
+       /*.wxlb li a{
+        display: block;
+        font-family: "微软雅黑";
+       	font-size: 22px;
+       text-decoration: none;
+       line-height: 35px;
+       }*/
+       .over{
+       	overflow: hidden;
+       }
+     .mbottoom{
+      font-family: "微软雅黑";
+     	width: 1200px;
+     	height:346px;
+     }
+     
+     	.mbottoom .jiachu{
+         font-weight: bold;
+     	}
+
+     .mbottom .l{
+     	float: left;
+     	
+     	width: 516px;
+     	height: 346px;
+     }
+      .mbottom .l .p1{
+          float: right;
+         padding-right: 300px;
+         
+        }
+       .mbottom .l .p2{
+       	float: right;
+       	color: #0384a8;
+       	font-weight: bold;
+       	padding-top: 12px;
+       	padding-right: 50px;
+       }
+       .mbottom .l .p1 .jiachu{
+       	font-weight: bold;
+       	font-size: 18px;
+       	color: black;
+       }
+       .mbottom .l .qiang1{
+         background-color: #0384a8;
+         height: 4px;
+         width: 468px;
+       }
+       .mbottom .l .wxlb1{
+            padding-left: 25px;
+       }
+       .mbottom .l .wxlb1 li{
+       	height: 46px;
+       }
+
+     .mbottom .c{
+     	float: left;
+     	width: 503px;
+     	height: 366px;
+     	padding-top: 10px;
+        }
+        .mbottom .c .p2{
+       	float: right;
+       	color: #0384a8;
+       	font-weight: bold;
+       	padding-right: 50px;
+       }
+       .mbottom .c .p1 .jiachu{
+       	font-weight: bold;
+       	font-size: 18px;
+       	color: black;
+       }
+       .mbottom .c .qiang2{
+       	background-color: #0384a8;
+         height: 4px;
+         width: 468px;
+       }
+       .mbottom .c .wxlb2{
+       	padding-left: 25px;
+       }
+       .mbottom .c .wxlb2 li{
+       	height: 46px;
+       }
+     .mbottom .r{
+     	float: left;
+     	width: 170px;
+     	height:376px;
+     }
+     div.r .kuang{
+     	width: 152x;
+     	height: 326px;
+     	border: 2px solid black;
+     	padding-left: 0px;
+     	padding-top: 0px;
+     }
+     div.r .kuang p{
+      font-family: "微软雅黑";
+     	font-size: 25px;
+     	color: #0384a8;
+     	text-align: center;
+     	font-weight: bold;
+     	line-height: 40x;
+     }
+     div.r .kuang .body{
+     	height: 4px;
+     	background-color: #0384a8;
+     }
+      .dibu{
+      	width: 1200px;
+      	background-color:#0384a8; 
+      	padding-bottom: 20px;
+      }
+      .dibu .case{
+      	width: 400px;
+      	margin: 0 auto;
+      }
+      .dibu .case p{
+        font-family: "微软雅黑";
+      	text-align: center;
+      }

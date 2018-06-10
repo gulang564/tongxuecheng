@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tab栏封装</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.main{
+		width: 400px;
+		margin: 100px auto;
+	}
+	.box1,.box2,.box3{
+		width: 400px;
+		height: 300px;
+		overflow: hidden;
+		margin-bottom: 50px;
+	}
+	ul{
+		list-style: none;
+	}
+	span{
+		display: inline-block;
+		width: 95px;
+		height: 20px;
+		text-align: center;
+		line-height: 20px;
+		background-color: red;
+	}
+	li{
+        height: 280px;
+        width: 100%;
+        background-color: yellow;
+        display: none;
+	}      
+	.current{
+		background-color: yellow;
+	}
+	.show{
+		display: block;
+	}
+
+	</style>                  
+	<script>
+		window.onload=function(){
+			function hezi(obj){//定义函数  obj为参数
+				var target=document.getElementById(obj);//获取传入参数的ID
+				//打引号是要注意，什么该打，什么不该打。如果是变量就不打，是名字就打。标签都是名字。
+				var spans=target.getElementsByTagName("span");//获取出入参数里面的所有span
+				var lis=target.getElementsByTagName("li"); //获取出入参数里面的所有li     //display:none ;是消失并且原来的位置也没了
+				for(var i=0;i<spans.length;i++){
+                     spans[i].index=i;//给每个span加一个索引
+                     spans[i].onmouseover=function(){//当鼠标移到相应位置清除所有span 和li的类名  留下当前的span的类名
+                     	for(var j=0;j<spans.length;j++)
+                     	{
+                     		spans[j].className="";
+                     		lis[j].className="";
+                     	}
+                     	this.className="current";
+                     	lis[this.index].className="show";//每个span的索引号对应一个li    this.index也就对应这相应的那个li
+                     }
+
+				}
+
+			}
+			hezi("one");//写完函数就要调用它，不然函数就是个死的，没有意义
+			hezi("two");/* 调函数要在函数外调用。不然就递归了。像C语言一样、
+			hezi("three");
+		}
+	</script>
+</head>
+<body>
+<div class="main">
+	<div class="box1" id="one">
+		<div class="top">
+			<span>体育</span>
+			<span>新闻</span>
+			<span>娱乐</span>
+			<span>广告</span>
+		</div>
+		<div class="mt">
+			<ul>
+				<li class="show">体育栏</li>
+				<li>新闻栏</li>
+				<li>娱乐栏</li>
+				<li>广告栏</li>
+			</ul>
+		</div>
+	</div>
+	<div class="box2" id="two">
+		<div class="top">
+			<span>体育</span>
+			<span>新闻</span>
+			<span>娱乐</span>
+			<span>广告</span>
+		</div>
+		<div class="mt">
+			<ul>
+				<li class="show">体育栏</li>
+				<li>新闻栏</li>
+				<li>娱乐栏</li>
+				<li>广告栏</li>
+			</ul>
+		</div>
+	</div>
+	<div class="box3" id="three">
+		<div class="top">
+			<span>体育</span>
+			<span>新闻</span>
+			<span>娱乐</span>
+			<span>广告</span>
+		</div>
+		<div class="mt">
+			<ul>
+				<li class="show">体育栏</li>
+				<li>新闻栏</li>
+				<li>娱乐栏</li>
+				<li>广告栏</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</body>
+</html>

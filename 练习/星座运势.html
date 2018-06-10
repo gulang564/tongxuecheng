@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>星座运势</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.box{
+		width: 400px;
+		height: 300px;
+		border:1px solid black;
+		margin: 100px auto;
+	}
+       .top{
+       	height: 30px;
+       }
+       .mid{
+       	height: 150px;
+       }
+       .mid .midl{
+       	width: 115px;
+       	height: 118px;
+       	background-image: url(images/shengxiao.jpg);
+       	float: left;
+       }
+       .mid .midr{
+       	float: left;
+       	height: 50px;
+       	width: 180px;
+       	padding-left: 100px;
+       }
+       .bot{
+       	width: 400px;
+       	border:1px solid red;
+       	height: 100px;
+       	text-indent: 2em;
+        }    
+       .qiang{
+       	clear: both;
+       }
+       
+       
+       .height{
+       	height: 20px;
+       }
+       #content{
+       	width: 400px;
+       }
+	</style>
+	<script>
+		window.onload=function(){
+			function $(id){return document.getElementById(id)};
+			var seles=document.getElementById("sx");
+			seles.onchange=function(){
+
+                 $("ico").style.backgroundPosition = "-(115*this.value)px 0";//写在前面的定位直接数加px。写在后面的 像  “0”+数字+“px”；
+                 $("content").innerHTML="dklsdfjkldsaoeaihfgdsfajkglasdfdsfdsgfdgfdhsfdgsdhfhgfhugdfgshfgdhgdff";
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="box">
+		<div class="top">
+			<h3>星座运势</h3>
+		</div>
+		<div class="mid">
+			<div class="midl" id="ico"></div>
+			<div class="midr">
+			<select name="sele" id="sx">
+				<option value="0">子鼠</option>
+				<option value="1">丑牛</option>
+				<option value="2">寅虎</option>
+				<option value="3">卯兔</option>
+				<option value="4">成龙</option>
+			</select>
+			</div>
+		
+        </div>
+		<div class="bot" id="content">
+			<p>老鼠的内容</p>
+		</div>
+	</div>
+</body>
+</html>
